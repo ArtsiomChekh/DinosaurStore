@@ -31,7 +31,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	}
 
-
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 
@@ -50,15 +49,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		// An AccessDeniedException will be thrown.
 		http.authorizeRequests().and().exceptionHandling().accessDeniedPage("/403");
 
-		// Configuration 
+		// Configuration
 		http.authorizeRequests().and().formLogin()
 
-				.loginProcessingUrl("/j_spring_security_check") 
-				.loginPage("/admin/login")
-				.defaultSuccessUrl("/admin/accountInfo")
-				.failureUrl("/admin/login?error=true")
-				.usernameParameter("userName")
-				.passwordParameter("password")
+				.loginProcessingUrl("/j_spring_security_check").loginPage("/admin/login")
+				.defaultSuccessUrl("/admin/accountInfo").failureUrl("/admin/login?error=true")
+				.usernameParameter("userName").passwordParameter("password")
 
 				// Configuration for the Logout page.
 				// (After logout, go to home page)
