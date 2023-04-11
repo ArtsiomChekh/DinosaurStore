@@ -14,6 +14,12 @@ import org.springframework.transaction.annotation.Transactional;
 import com.qbproject.dinosaurstore.entity.Order;
 import com.qbproject.dinosaurstore.entity.OrderDetail;
 import com.qbproject.dinosaurstore.entity.Product;
+import com.qbproject.dinosaurstore.model.CartInfo;
+import com.qbproject.dinosaurstore.model.CartLineInfo;
+import com.qbproject.dinosaurstore.model.CustomerInfo;
+import com.qbproject.dinosaurstore.model.OrderDetailInfo;
+import com.qbproject.dinosaurstore.model.OrderInfo;
+import com.qbproject.dinosaurstore.pagination.PaginationResult;
 
 @Transactional
 @Repository
@@ -79,7 +85,7 @@ public class OrderDAO {
 		session.flush();
 	}
 
-	// @page = 1, 2, ...
+	// pages
 	public PaginationResult<OrderInfo> listOrderInfo(int page, int maxResult, int maxNavigationPage) {
 		String sql = "Select new " + OrderInfo.class.getName()//
 				+ "(ord.id, ord.orderDate, ord.orderNum, ord.amount, "

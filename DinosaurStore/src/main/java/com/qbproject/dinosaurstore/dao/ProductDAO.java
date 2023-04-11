@@ -12,6 +12,9 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.qbproject.dinosaurstore.entity.Product;
+import com.qbproject.dinosaurstore.form.ProductForm;
+import com.qbproject.dinosaurstore.model.ProductInfo;
+import com.qbproject.dinosaurstore.pagination.PaginationResult;
 
 import jakarta.persistence.NoResultException;
 
