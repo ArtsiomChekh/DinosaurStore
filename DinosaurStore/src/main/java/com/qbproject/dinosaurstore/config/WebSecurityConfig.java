@@ -11,7 +11,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import com.qbproject.dinosaurstore.service.UserDetailsServiceImpl;
 
 @Configuration
-public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+public class WebSecurityConfig extends  WebSecurityConfigurerAdapter {
 
 	@Autowired
 	UserDetailsServiceImpl userDetailsService;

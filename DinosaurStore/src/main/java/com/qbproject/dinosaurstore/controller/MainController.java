@@ -27,8 +27,7 @@ import com.qbproject.dinosaurstore.pagination.PaginationResult;
 import com.qbproject.dinosaurstore.utils.Utils;
 import com.qbproject.dinosaurstore.validator.CustomerFormValidator;
 
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.*;
 
 @Controller
 @Transactional
