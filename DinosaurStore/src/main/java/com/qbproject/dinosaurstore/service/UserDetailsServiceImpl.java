@@ -18,8 +18,12 @@ import com.qbproject.dinosaurstore.entity.Account;
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 
-	@Autowired
-	private AccountDAO accountDAO;
+    private final AccountDAO accountDAO;
+
+    @Autowired
+    public UserDetailsServiceImpl(AccountDAO accountDAO) {
+        this.accountDAO = accountDAO;
+    }
 
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		Account account = accountDAO.findAccount(username);

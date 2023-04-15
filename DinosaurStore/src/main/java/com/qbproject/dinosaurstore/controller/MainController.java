@@ -12,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -63,6 +64,12 @@ public class MainController {
 			dataBinder.setValidator(customerFormValidator);
 		}
 
+	}
+	@ExceptionHandler
+	@RequestMapping("/customError")
+	public String handleError(HttpServletRequest request, HttpServletResponse response) {
+	    // Handle error and return the appropriate view or redirect
+	    return "errorPage"; // replace with the name of your error page view
 	}
 
 	// When access denied
