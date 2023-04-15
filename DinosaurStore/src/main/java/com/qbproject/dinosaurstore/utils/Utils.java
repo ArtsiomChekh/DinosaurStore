@@ -2,7 +2,7 @@ package com.qbproject.dinosaurstore.utils;
 
 import com.qbproject.dinosaurstore.model.CartInfo;
 
-import jakarta.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletRequest;
 
 public class Utils {
 

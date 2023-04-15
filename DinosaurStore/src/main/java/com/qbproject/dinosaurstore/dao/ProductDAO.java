@@ -16,7 +16,7 @@ import com.qbproject.dinosaurstore.form.ProductForm;
 import com.qbproject.dinosaurstore.model.ProductInfo;
 import com.qbproject.dinosaurstore.pagination.PaginationResult;
 
-import jakarta.persistence.NoResultException;
+import javax.persistence.NoResultException;
 
 @Transactional
 @Repository

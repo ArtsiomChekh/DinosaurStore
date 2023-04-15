@@ -28,7 +28,7 @@ public class PaginationResult<E> {
 
 		ScrollableResults resultScroll = query.scroll(ScrollMode.SCROLL_INSENSITIVE);
 
-		List<E> results = new ArrayList<>();
+		List<E> results = new ArrayList<E>();
 
 		boolean hasResult = resultScroll.first();
 

@@ -14,12 +14,10 @@ public class CustomerFormValidator implements Validator {
 	private EmailValidator emailValidator = EmailValidator.getInstance();
 
 	// This validator only checks for the CustomerForm.
-	@Override
 	public boolean supports(Class<?> clazz) {
 		return clazz == CustomerForm.class;
 	}
 
-	@Override
 	public void validate(Object target, Errors errors) {
 		CustomerForm custInfo = (CustomerForm) target;
 

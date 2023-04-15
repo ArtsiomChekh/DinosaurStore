@@ -2,6 +2,9 @@ package com.qbproject.dinosaurstore.controller;
 
 import java.io.IOException;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
@@ -26,8 +29,6 @@ import com.qbproject.dinosaurstore.model.ProductInfo;
 import com.qbproject.dinosaurstore.pagination.PaginationResult;
 import com.qbproject.dinosaurstore.utils.Utils;
 import com.qbproject.dinosaurstore.validator.CustomerFormValidator;
-
-import jakarta.servlet.*;
 
 @Controller
 @Transactional

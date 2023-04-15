@@ -17,12 +17,10 @@ public class ProductFormValidator implements Validator {
 	private ProductDAO productDAO;
 
 	// This validator only checks for the ProductForm.
-	@Override
 	public boolean supports(Class<?> clazz) {
 		return clazz == ProductForm.class;
 	}
 
-	@Override
 	public void validate(Object target, Errors errors) {
 		ProductForm productForm = (ProductForm) target;
 
